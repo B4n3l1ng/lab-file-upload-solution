@@ -8,7 +8,7 @@ const userSchema = new Schema(
       type: String,
       trim: true,
       required: [true, "Username is required."],
-      unique: true
+      unique: true,
     },
     email: {
       type: String,
@@ -17,15 +17,20 @@ const userSchema = new Schema(
       match: [/^\S+@\S+\.\S+$/, "Please use a valid email address."],
       unique: true,
       lowercase: true,
-      trim: true
+      trim: true,
     },
     passwordHash: {
       type: String,
-      required: [true, "Password is required."]
-    }
+      required: [true, "Password is required."],
+    },
+    image: {
+      type: String,
+      default:
+        "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
+    },
   },
   {
-    timestamps: true
+    timestamps: true,
   }
 );
 
