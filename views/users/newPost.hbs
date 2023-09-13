@@ -1,0 +1,22 @@
+<div id="form">
+  <h2>New Post</h2>
+  <form action="/newPost" method="POST" enctype="multipart/form-data">
+    <label>Image:
+      <input type="file" accept="image/jpg, image/png" name="imageUrl" />
+    </label>
+    <label>Picture name:
+      <input type="text" name="picName" placeholder="Name of your picture" />
+    </label>
+    <label>Content:
+      <textarea
+        type="text"
+        name="content"
+        placeholder="Content of your post"
+        rows="5"
+        cols="49"
+      ></textarea>
+    </label>
+
+    <button>Submit</button>
+  </form>
+</div>
